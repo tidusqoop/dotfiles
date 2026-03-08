@@ -1,0 +1,4 @@
+--theme="Catppuccin Mocha"
+--map-syntax ".env*:Bash"
+--map-syntax "*.conf:INI"
+--map-syntax "Dockerfile.*:Dockerfile"
