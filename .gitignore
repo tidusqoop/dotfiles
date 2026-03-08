@@ -1,0 +1,14 @@
+# 민감 정보
+.env
+.env.*
+*.pem
+*.key
+*_credentials*
+*_token*
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
