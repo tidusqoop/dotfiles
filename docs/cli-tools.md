@@ -37,8 +37,8 @@ brew install ripgrep fzf bat eza tree zoxide fd jq yq delta htop tldr direnv sta
 - [x] fd
 - [x] jq
 - [x] yq
-- [ ] delta
-- [ ] htop
-- [ ] tldr
-- [ ] direnv
+- [x] delta
+- [x] htop
+- [ ] tldr - 필요성 아직 와닿지 않아 보류
+- [x] direnv
 - [ ] starship
