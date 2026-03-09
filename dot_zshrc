@@ -1,6 +1,9 @@
 export PATH="$HOME/.local/bin:$PATH"
 
+# claude
 alias claudey='claude --dangerously-skip-permissions'
+
+# alias
 alias ll='ls -al'
 
 # bat
