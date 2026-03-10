@@ -13,7 +13,11 @@ CLI 유틸리티 도구 가이드. 설치, 설정, 사용법 정리.
 
 ### [terminal/](terminal/)
 
-터미널 환경 설정. 에뮬레이터, 프롬프트 등.
+터미널 환경 설정. 에뮬레이터, 프롬프트, 개발환경 구성.
 
+- [cli-dev-environment.md](terminal/cli-dev-environment.md) - CLI 중심 개발환경 가이드 (아키텍처, 전환 전략)
 - [ghostty.md](terminal/ghostty.md) - GPU 가속 터미널 에뮬레이터 (단축키)
+- [tmux.md](terminal/tmux.md) - 터미널 멀티플렉서 (세션 관리, 화면 분할)
+- [neovim.md](terminal/neovim.md) - 터미널 코드 편집기 (모달 편집, 프리셋)
+- [lazygit.md](terminal/lazygit.md) - Git TUI 클라이언트 (시각적 Git 관리)
 - [starship.md](terminal/starship.md) - 크로스 셸 프롬프트 (설정, 색상)
