@@ -61,7 +61,7 @@ git 명령어를 TUI로 시각화. VS Code Source Control 패널 대체.
 - Interactive rebase, conflict 해결, stash 관리
 - 학습 곡선이 완만 (1-2시간이면 기본 사용)
 
-→ 상세: [lazygit.md](lazygit.md)
+→ 상세: [lazygit.md](../cli-tools/lazygit.md)
 
 ## VS Code 기능 대체 매핑
 
