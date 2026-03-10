@@ -5,7 +5,7 @@ DevOps / 백엔드 개발자를 위한 필수 CLI 도구 목록
 ## 설치 명령어
 
 ```bash
-brew install ripgrep fzf bat eza tree zoxide fd jq yq delta htop tldr direnv starship
+brew install ripgrep fzf bat eza tree zoxide fd jq yq delta htop tldr direnv
 ```
 
 ## 도구별 요약
@@ -24,7 +24,6 @@ brew install ripgrep fzf bat eza tree zoxide fd jq yq delta htop tldr direnv sta
 | **htop** | `top` | 인터랙티브 프로세스 모니터링. CPU/메모리 사용량을 시각적으로 확인 |
 | **tldr** | `man` | 명령어의 핵심 사용 예시만 보여주는 축약 매뉴얼 |
 | **direnv** | - | 디렉토리 진입 시 `.envrc` 파일의 환경변수를 자동 로드/언로드 |
-| **starship** | 기본 프롬프트 | 빠르고 커스터마이징 가능한 프롬프트. git 브랜치, 언어 버전 등 자동 표시 |
 
 ## 설치 상태
 
@@ -41,4 +40,3 @@ brew install ripgrep fzf bat eza tree zoxide fd jq yq delta htop tldr direnv sta
 - [x] htop
 - [ ] tldr - 필요성 아직 와닿지 않아 보류
 - [x] direnv
-- [x] starship
