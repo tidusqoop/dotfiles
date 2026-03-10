@@ -13,8 +13,15 @@ brew install \
     sheldon \
     starship \
     tree \
+    yazi \
     yq \
     zoxide
+
+# yazi 미리보기 의존성
+brew install \
+    ffmpeg \
+    poppler \
+    sevenzip
 
 # 폰트
 brew install --cask \
