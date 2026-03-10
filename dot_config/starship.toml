@@ -1,0 +1,74 @@
+# Minimal starship prompt
+# Nerd Font 없이 유니코드 기본 문자만 사용
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$kubernetes\
+$aws\
+$line_break\
+$character"""
+
+right_format = "$cmd_duration"
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+style = "bold #7aa2f7"
+
+[git_branch]
+format = " [$branch]($style)"
+style = "#9ece6a"
+
+[git_status]
+format = " [$all_status$ahead_behind]($style)"
+style = "#e0af68"
+
+[kubernetes]
+disabled = false
+format = " \\([$context/$namespace]($style)\\)"
+style = "#bb9af7"
+detect_folders = []
+
+[aws]
+disabled = false
+format = " \\([$profile]($style)\\)"
+style = "#ff9e64"
+
+[character]
+success_symbol = "[❯](bold #9ece6a)"
+error_symbol = "[❯](bold #f7768e)"
+vimcmd_symbol = "[❮](bold #9ece6a)"
+
+[sudo]
+disabled = false
+symbol = "# "
+style = "bold #f7768e"
+
+[cmd_duration]
+min_time = 2_000
+format = "[$duration]($style)"
+style = "#565f89"
+
+# 불필요한 모듈 비활성화
+[package]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[rust]
+disabled = true
+
+[golang]
+disabled = true
+
+[java]
+disabled = true
+
+[docker_context]
+disabled = true

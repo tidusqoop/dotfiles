@@ -10,6 +10,7 @@ brew install \
     htop \
     jq \
     ripgrep \
+    starship \
     tree \
     yq \
     zoxide
