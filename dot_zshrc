@@ -7,7 +7,10 @@ eval "$(sheldon source)"
 alias claudey='claude --dangerously-skip-permissions'
 
 # alias
-alias ll='ls -al'
+alias ls='eza'
+alias ll='eza -l --git -h --group-directories-first'
+alias la='eza -la --git -h --group-directories-first'
+alias lt='eza --tree --level=2 --git-ignore'
 alias grep='rg'
 
 # bat

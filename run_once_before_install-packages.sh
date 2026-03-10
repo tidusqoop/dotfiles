@@ -5,6 +5,7 @@ brew install \
     bat \
     delta \
     direnv \
+    eza \
     fd \
     fzf \
     htop \
