@@ -21,6 +21,7 @@ brew install ripgrep fzf bat eza tree zoxide fd jq yq delta htop tldr direnv
 | **jq** | - | JSON 파싱/필터링 도구. API 응답, K8s 출력, Terraform state 처리에 필수 |
 | **yq** | - | YAML 파싱/필터링 도구. K8s manifest, docker-compose 등 다룰 때 유용 |
 | **delta** | `git diff` | 구문 강조 + side-by-side diff. git과 연동하여 diff/log 출력 개선 |
+| **lazygit** | VS Code Git | Git TUI 클라이언트. 시각적 stage/commit/rebase/conflict 해결 |
 | **htop** | `top` | 인터랙티브 프로세스 모니터링. CPU/메모리 사용량을 시각적으로 확인 |
 | **tldr** | `man` | 명령어의 핵심 사용 예시만 보여주는 축약 매뉴얼 |
 | **direnv** | - | 디렉토리 진입 시 `.envrc` 파일의 환경변수를 자동 로드/언로드 |
@@ -30,7 +31,7 @@ brew install ripgrep fzf bat eza tree zoxide fd jq yq delta htop tldr direnv
 - [x] ripgrep (rg)
 - [x] fzf
 - [x] bat
-- [ ] eza - 부담스러워서 일단 잠시 보류
+- [x] eza
 - [x] tree
 - [x] zoxide
 - [x] fd
@@ -40,3 +41,4 @@ brew install ripgrep fzf bat eza tree zoxide fd jq yq delta htop tldr direnv
 - [x] htop
 - [ ] tldr - 필요성 아직 와닿지 않아 보류
 - [x] direnv
+- [x] lazygit

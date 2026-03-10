@@ -10,6 +10,7 @@ brew install \
     fzf \
     htop \
     jq \
+    lazygit \
     ripgrep \
     sheldon \
     starship \
