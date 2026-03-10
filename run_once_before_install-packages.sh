@@ -17,7 +17,8 @@ brew install \
 
 # 폰트
 brew install --cask \
-    font-jetbrains-mono-nerd-font
+    font-jetbrains-mono-nerd-font \
+    font-noto-sans-cjk-kr
 
 # GUI 앱
 brew install --cask \
