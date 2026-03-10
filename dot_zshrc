@@ -1,5 +1,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 
+# sheldon
+eval "$(sheldon source)"
+
 # claude
 alias claudey='claude --dangerously-skip-permissions'
 

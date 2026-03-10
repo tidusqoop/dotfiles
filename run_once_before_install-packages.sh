@@ -10,6 +10,7 @@ brew install \
     htop \
     jq \
     ripgrep \
+    sheldon \
     starship \
     tree \
     yq \
