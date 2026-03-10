@@ -15,6 +15,10 @@ brew install \
     yq \
     zoxide
 
+# 폰트
+brew install --cask \
+    font-jetbrains-mono-nerd-font
+
 # GUI 앱
 brew install --cask \
     ghostty

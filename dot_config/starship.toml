@@ -13,28 +13,43 @@ $character"""
 right_format = "$cmd_duration"
 
 [directory]
-truncation_length = 3
-truncation_symbol = "…/"
-style = "bold #7aa2f7"
+truncate_to_repo = true
+truncation_length = 0
+truncation_symbol = ""
+fish_style_pwd_dir_length = 0
+style = "bold #e4e7f3"
 
 [git_branch]
-format = " [$branch]($style)"
-style = "#9ece6a"
+symbol = " "
+format = "| [$symbol$branch]($style)"
+style = "#8edf96"
 
 [git_status]
-format = " [$all_status$ahead_behind]($style)"
-style = "#e0af68"
+format = "[$staged$modified$untracked$deleted$renamed$conflicted$ahead_behind]($style)"
+staged = " [+$count](bold #9ece6a)"
+modified = " [~$count](#e0af68)"
+untracked = " [?$count](#7aa2f7)"
+deleted = " [-$count](#f7768e)"
+renamed = " [»$count](#bb9af7)"
+conflicted = " [!$count](bold #f7768e)"
+ahead = " [↑$count](#565f89)"
+behind = " [↓$count](#565f89)"
+diverged = " [↑$ahead_count↓$behind_count](#565f89)"
+style = ""
 
 [kubernetes]
 disabled = false
-format = " \\([$context/$namespace]($style)\\)"
-style = "#bb9af7"
+format = " | [󱃾 $context]($style)"
+style = "#636985"
 detect_folders = []
+
+[kubernetes.context_aliases]
 
 [aws]
 disabled = false
-format = " \\([$profile]($style)\\)"
-style = "#ff9e64"
+force_display = true
+format = " | [ $profile]($style)"
+style = "#636985"
 
 [character]
 success_symbol = "[❯](bold #9ece6a)"
