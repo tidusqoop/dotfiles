@@ -4,7 +4,10 @@ export PATH="$HOME/.local/bin:$PATH"
 eval "$(sheldon source)"
 
 # claude
-alias claudey='claude --dangerously-skip-permissions'
+alias cl='claude'
+alias cy='claude --dangerously-skip-permissions'
+alias clr='claude --resume'
+alias cyr='claude --dangerously-skip-permissions --resume'
 
 # alias
 alias ls='eza'
