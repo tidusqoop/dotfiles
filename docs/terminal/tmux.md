@@ -59,10 +59,11 @@ Ctrl-b z      # pane 줌 토글 (전체화면)
 
 ## DevOps 활용 예시
 
-### 프로젝트별 워크스페이스
+### 프로젝트별 워크스페이스 (자동 구성 스크립트)
 
 ```bash
-# 세션 생성 + 레이아웃
+# .sh로 저장해두면 한 줄로 워크스페이스 재현 가능
+# -d로 백그라운드 생성 → 레이아웃 구성 → 마지막에 attach
 tmux new -s infra -d
 tmux send-keys -t infra 'kubectl get pods -w' Enter
 tmux split-window -t infra -h
@@ -80,10 +81,10 @@ tmux attach -t infra
 └──────────────┴───────────────┘
 ```
 
-### 로컬 개발 워크스페이스
+### 로컬 개발 워크스페이스 (자동 구성 스크립트)
 
 ```bash
-# 세션 생성 + 레이아웃
+# -d로 백그라운드 생성 → 레이아웃 구성 → 마지막에 attach
 tmux new -s dev -d
 tmux send-keys -t dev 'vim .' Enter
 tmux split-window -t dev -h
