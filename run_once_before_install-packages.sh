@@ -11,6 +11,7 @@ brew install \
     htop \
     jq \
     lazygit \
+    neovim \
     ripgrep \
     sheldon \
     starship \
@@ -20,6 +21,12 @@ brew install \
     yazi \
     yq \
     zoxide
+
+# neovim 의존성
+brew install \
+    luarocks \
+    tree-sitter \
+    tree-sitter-cli
 
 # yazi 미리보기 의존성
 brew install \
