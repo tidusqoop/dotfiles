@@ -72,6 +72,35 @@ tmux send-keys -t infra 'htop' Enter
 tmux attach -t infra
 ```
 
+```
+┌──────────────┬───────────────┐
+│              │  stern (log)  │
+│ kubectl pods ├───────────────┤
+│              │     htop      │
+└──────────────┴───────────────┘
+```
+
+### 로컬 개발 워크스페이스
+
+```bash
+# 세션 생성 + 레이아웃
+tmux new -s dev -d
+tmux send-keys -t dev 'vim .' Enter
+tmux split-window -t dev -h
+tmux send-keys -t dev 'lazygit' Enter
+tmux split-window -t dev -v
+tmux send-keys -t dev 'npm run dev' Enter
+tmux attach -t dev
+```
+
+```
+┌──────────────┬───────────────┐
+│              │   lazygit     │
+│     vim      ├───────────────┤
+│              │  npm run dev  │
+└──────────────┴───────────────┘
+```
+
 ### AI agent 다중 모니터링
 
 ```
