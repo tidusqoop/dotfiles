@@ -48,9 +48,10 @@ tmux kill-session -t old # 세션 삭제
 ```
 Ctrl-b d      # detach (세션 분리, 백그라운드 유지)
 Ctrl-b c      # 새 window
-Ctrl-b 0-9    # window 전환
-Ctrl-b %      # 좌우 pane 분할
-Ctrl-b "      # 상하 pane 분할
+Ctrl-b w      # window 목록 (선택 전환)
+Ctrl-b 0-9    # window 번호로 전환
+Ctrl-b |      # 좌우 pane 분할 (커스텀)
+Ctrl-b -      # 상하 pane 분할 (커스텀)
 Ctrl-b 방향키  # pane 이동
 Ctrl-b x      # 현재 pane 종료
 Ctrl-b z      # pane 줌 토글 (전체화면)

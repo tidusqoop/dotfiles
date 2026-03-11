@@ -14,6 +14,7 @@ brew install \
     ripgrep \
     sheldon \
     starship \
+    tmux \
     tree \
     yazi \
     yq \
@@ -29,6 +30,11 @@ brew install \
 brew install --cask \
     font-jetbrains-mono-nerd-font \
     font-noto-sans-cjk-kr
+
+# tpm (tmux plugin manager)
+if [ ! -d "$HOME/.config/tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.config/tmux/plugins/tpm"
+fi
 
 # GUI 앱
 brew install --cask \
