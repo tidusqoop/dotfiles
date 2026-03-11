@@ -15,6 +15,7 @@ alias lg='lazygit'
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
 alias tl='tmux ls'
+alias mux='tmuxinator'
 alias grep='rg'
 
 # bat

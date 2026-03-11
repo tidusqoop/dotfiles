@@ -15,6 +15,7 @@ brew install \
     sheldon \
     starship \
     tmux \
+    tmuxinator \
     tree \
     yazi \
     yq \

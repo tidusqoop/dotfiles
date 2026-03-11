@@ -119,9 +119,30 @@ tmux attach -t dev
 - **키바인딩 충돌**: Ghostty 단축키와 tmux prefix 키 겹침 주의
 - **Nerd Font**: JetBrainsMono Nerd Font 사용 중이므로 상태바 아이콘 바로 사용 가능
 
-## 추천 플러그인
+## tmuxinator — YAML 기반 워크스페이스 관리
+
+쉘 스크립트 대신 YAML로 선언적으로 레이아웃을 정의. 복잡한 워크스페이스일수록 가독성이 좋다.
+
+```bash
+mux start dev        # 프로젝트 시작
+mux stop dev         # 프로젝트 종료
+mux list             # 프로젝트 목록
+mux new my-project   # 새 프로젝트 템플릿 생성
+mux edit dev         # 프로젝트 설정 편집
+```
+
+설정 파일 위치: `~/.config/tmuxinator/*.yml` (chezmoi 관리)
+
+### 쉘 스크립트 vs tmuxinator 비교
+
+| | 쉘 스크립트 | tmuxinator (YAML) |
+|---|---|---|
+| 장점 | 의존성 없음 | 선언적, 가독성 좋음 |
+| 단점 | 복잡해지면 읽기 어려움 | 별도 설치 필요 |
+| 적합 | 서버, 간단한 레이아웃 | 로컬 개발, 복잡한 레이아웃 |
+
+## 플러그인
 
 - **tpm**: tmux plugin manager
 - **tmux-resurrect**: 세션 레이아웃 저장/복원 (재부팅 후에도)
 - **tmux-continuum**: resurrect 자동 저장
-- **tmuxinator**: YAML로 복잡한 레이아웃 정의 및 자동 구성
