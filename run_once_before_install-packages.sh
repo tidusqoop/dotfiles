@@ -10,6 +10,8 @@ brew install \
     fzf \
     htop \
     jq \
+    k9s \
+    kubectl \
     lazygit \
     neovim \
     ripgrep \
