@@ -8,6 +8,7 @@ brew install \
     eza \
     fd \
     fzf \
+    go \
     helm \
     htop \
     jq \
