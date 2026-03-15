@@ -1,5 +1,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 
+# completion
+autoload -Uz compinit && compinit
+
 # sheldon
 eval "$(sheldon source)"
 
