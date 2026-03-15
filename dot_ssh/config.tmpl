@@ -1,0 +1,8 @@
+{{- if lookPath "orb" }}
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+Include ~/.orbstack/ssh/config
+
+{{ end -}}
+Include mshyeon/config
+Include roca/config
