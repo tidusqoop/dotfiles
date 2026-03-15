@@ -1,0 +1,5 @@
+
+Host github-tidusqoop
+	HostName github.com
+	IdentityFile ~/.ssh/mshyeon/git_tidusqoop
+	User git

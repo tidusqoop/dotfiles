@@ -1,0 +1,4 @@
+Host github-roca
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/roca/git_roca_mshyeon
