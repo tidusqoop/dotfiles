@@ -9,6 +9,7 @@ brew install \
     fd \
     fzf \
     go \
+    golangci-lint \
     helm \
     htop \
     jq \
