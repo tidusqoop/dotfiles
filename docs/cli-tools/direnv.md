@@ -1,6 +1,8 @@
 # direnv 사용법
 
-> 디렉토리에 진입하면 `.envrc` 파일의 환경변수를 자동으로 로드하고, 빠져나오면 자동으로 언로드하는 도구. 프로젝트별 환경 분리에 필수.
+> 디렉토리에 진입하면 `.envrc` 파일의 환경변수를
+> 자동으로 로드하고, 빠져나오면 자동으로 언로드하는
+> 도구. 프로젝트별 환경 분리에 필수.
 
 ## 설치
 
@@ -10,7 +12,8 @@ brew install direnv
 
 ## 쉘 통합
 
-`.zshrc`에 아래 라인을 추가한다 (다른 설정보다 **맨 마지막에** 두는 것을 권장):
+`.zshrc`에 아래 라인을 추가한다
+(다른 설정보다 **맨 마지막에** 두는 것을 권장):
 
 ```bash
 eval "$(direnv hook zsh)"
@@ -28,7 +31,7 @@ echo 'export DB_PORT=5432' >> .envrc
 
 ### 2. direnv가 차단 메시지를 표시
 
-```
+```text
 direnv: error /Users/mshyeon/dev/my-project/.envrc is blocked.
 Run `direnv allow` to approve its content.
 ```
@@ -51,12 +54,12 @@ cd ~
 ## 주요 명령어
 
 | 명령어 | 설명 |
-|--------|------|
+| --- | --- |
 | `direnv allow` | 현재 디렉토리의 `.envrc` 허용 |
 | `direnv deny` | 현재 디렉토리의 `.envrc` 차단 |
 | `direnv reload` | `.envrc` 변경 후 수동 리로드 |
 | `direnv status` | 현재 상태 확인 |
-| `direnv edit .` | `$EDITOR`로 `.envrc` 편집 (저장 시 자동 allow) |
+| `direnv edit .` | `$EDITOR`로 `.envrc` 편집 |
 
 ## .envrc 작성 예시
 
@@ -86,7 +89,8 @@ export PATH="$PWD/bin:$PATH"
 dotenv .env
 ```
 
-기존 `.env` 파일이 있는 프로젝트(Docker Compose 등)에서 유용하다.
+기존 `.env` 파일이 있는 프로젝트
+(Docker Compose 등)에서 유용하다.
 
 ### 특정 버전 도구 사용 (asdf/mise 연동)
 
@@ -127,12 +131,12 @@ export KUBECONFIG="$HOME/.kube/config-staging"
 
 ### 프로젝트별 환경 분리
 
-```
+```text
 ~/dev/
 ├── project-a/
-│   └── .envrc    # DB_HOST=db-a.example.com, AWS_PROFILE=team-a
+│   └── .envrc    # DB_HOST=db-a, AWS_PROFILE=team-a
 ├── project-b/
-│   └── .envrc    # DB_HOST=db-b.example.com, AWS_PROFILE=team-b
+│   └── .envrc    # DB_HOST=db-b, AWS_PROFILE=team-b
 └── infra/
     └── .envrc    # AWS_PROFILE=admin, TF_WORKSPACE=prod
 ```
@@ -155,19 +159,22 @@ export PROJECT=a
 ```bash
 # .envrc
 dotenv .env           # 기본 환경변수
-dotenv_if_exists .env.local  # 로컬 오버라이드 (파일 없어도 에러 안 남)
+dotenv_if_exists .env.local  # 로컬 오버라이드
 ```
 
 ## 보안 주의사항
 
-- `.envrc`를 **수정할 때마다** `direnv allow`를 다시 해야 한다 (보안을 위한 설계)
-- `.envrc`에 실제 시크릿을 넣을 경우 **반드시 `.gitignore`에 추가**:
+- `.envrc`를 **수정할 때마다** `direnv allow`를
+  다시 해야 한다 (보안을 위한 설계)
+- `.envrc`에 실제 시크릿을 넣을 경우
+  **반드시 `.gitignore`에 추가**:
 
 ```bash
 echo ".envrc" >> .gitignore
 ```
 
-- 또는 `.envrc`는 커밋하고, 시크릿만 `.env.local`에 분리:
+- 또는 `.envrc`는 커밋하고,
+  시크릿만 `.env.local`에 분리:
 
 ```bash
 # .envrc (커밋 가능)
@@ -184,7 +191,7 @@ API_SECRET=abc123
 `.envrc`에서 사용할 수 있는 내장 함수들:
 
 | 함수 | 설명 |
-|------|------|
+| --- | --- |
 | `PATH_add <dir>` | PATH 앞에 디렉토리 추가 |
 | `path_add <var> <dir>` | 임의 변수에 경로 추가 |
 | `source_up` | 상위 디렉토리의 `.envrc` 로드 |
@@ -192,7 +199,7 @@ API_SECRET=abc123
 | `dotenv_if_exists <file>` | 파일이 있을 때만 로드 |
 | `layout python` | Python venv 자동 생성/활성화 |
 | `layout go` | GOPATH 설정 |
-| `use node` | `.node-version` 기반 노드 버전 설정 |
+| `use node` | `.node-version` 기반 노드 버전 |
 | `log_status <msg>` | 상태 메시지 출력 |
 
 전체 목록: `direnv stdlib`

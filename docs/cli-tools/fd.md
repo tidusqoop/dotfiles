@@ -1,6 +1,7 @@
 # fd 사용법
 
-> `find`의 상위 호환. 직관적인 문법, 빠른 속도, `.gitignore` 자동 반영을 제공하는 파일 검색 도구.
+> `find`의 상위 호환. 직관적인 문법, 빠른 속도,
+> `.gitignore` 자동 반영을 제공하는 파일 검색 도구.
 
 ## 설치
 
@@ -30,14 +31,14 @@ fd
 ## 주요 옵션
 
 | 옵션 | 설명 |
-|------|------|
-| `-e <ext>` | 확장자 필터 (예: `-e go`, `-e yaml`) |
+| --- | --- |
+| `-e <ext>` | 확장자 필터 (예: `-e go`) |
 | `-t f` | 파일만 검색 |
 | `-t d` | 디렉토리만 검색 |
 | `-t l` | 심볼릭 링크만 검색 |
 | `-H` | 숨김 파일/디렉토리 포함 |
 | `-I` | `.gitignore` 무시 |
-| `-u` | 숨김 파일 포함 (`-H`와 동일), `-uu`는 gitignore도 무시 |
+| `-u` | 숨김 파일 포함, `-uu`는 gitignore도 무시 |
 | `-d <n>` | 검색 깊이 제한 |
 | `-E <패턴>` | 특정 패턴 제외 |
 | `-g` | glob 패턴 사용 (기본은 정규식) |
@@ -54,13 +55,13 @@ fd
 ## find와 비교
 
 ```bash
-# find                                    # fd
-find . -type f -name "*.go"               fd -e go
-find . -iname "readme*"                   fd -i readme
-find . -type d -name "config"             fd -t d config
-find . -name "*.js" ! -path "*/node_*"    fd -e js    # gitignore 자동 반영
-find . -mtime -7 -type f                  fd --changed-within 7d
-find . -size +100M                        fd -S +100M
+# find                          # fd
+find . -type f -name "*.go"     fd -e go
+find . -iname "readme*"         fd -i readme
+find . -type d -name "config"   fd -t d config
+find . -name "*.js"             fd -e js
+find . -mtime -7 -type f        fd --changed-within 7d
+find . -size +100M              fd -S +100M
 ```
 
 ## 필터링
@@ -161,7 +162,7 @@ fd -e yaml -e yml -x grep -l "kind: Deployment" {}
 # fd 결과를 fzf로 선택 후 vim으로 열기
 fd -e go | fzf | xargs vim
 
-# fzf 기본 검색 명령어를 fd로 변경 (.zshrc에 추가)
+# fzf 기본 검색 명령어를 fd로 변경 (.zshrc)
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND='fd --type f'
 export FZF_ALT_C_COMMAND='fd --type d'

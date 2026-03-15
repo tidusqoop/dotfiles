@@ -1,6 +1,7 @@
 # eza 사용법
 
-> `ls`의 상위 호환. 색상, 아이콘, Git 상태 표시, 트리뷰를 지원하는 파일 목록 도구.
+> `ls`의 상위 호환. 색상, 아이콘, Git 상태 표시,
+> 트리뷰를 지원하는 파일 목록 도구.
 
 ## 기본 사용법
 
@@ -27,21 +28,21 @@ eza --icons
 ## 주요 옵션
 
 | 옵션 | 설명 |
-|------|------|
+| --- | --- |
 | `-l` | 상세 목록 (퍼미션, 크기, 날짜 등) |
 | `-a` | 숨김 파일 포함 |
 | `-h` | 헤더 표시 (컬럼명) |
 | `--tree` | 트리 형태로 출력 |
 | `--level=N` | 트리 깊이 제한 |
-| `--icons` | 파일 타입별 아이콘 표시 (Nerd Font 필요) |
+| `--icons` | 파일 타입별 아이콘 (Nerd Font 필요) |
 | `--git` | Git 상태 표시 (staged/modified 등) |
 | `--git-ignore` | `.gitignore`에 등록된 파일 숨김 |
-| `-s <field>` | 정렬 기준 (name, size, date, type 등) |
+| `-s <field>` | 정렬 (name, size, date, type 등) |
 | `-r` | 역순 정렬 |
 | `--group-directories-first` | 디렉토리를 먼저 표시 |
 | `--no-permissions` | 퍼미션 컬럼 숨김 |
 | `--no-user` | 소유자 컬럼 숨김 |
-| `--time-style=relative` | 시간을 "2 hours ago" 형태로 표시 |
+| `--time-style=relative` | "2 hours ago" 형태로 표시 |
 
 ## 실전 활용 예시
 
@@ -63,8 +64,8 @@ eza -l --git
 
 # 출력 예시:
 # .rw-r--r--  1.2k mshyeon  -- README.md
-# .rw-r--r--   850 mshyeon  M- src/main.go    ← modified (staged)
-# .rw-r--r--   320 mshyeon  -M src/util.go    ← modified (unstaged)
+# .rw-r--r--   850 mshyeon  M- src/main.go
+# .rw-r--r--   320 mshyeon  -M src/util.go
 ```
 
 ### 파일 크기 기준 정렬
@@ -94,11 +95,13 @@ alias lt='eza --tree --level=2 --git-ignore'
 
 ## Nerd Font 아이콘
 
-`--icons` 옵션을 사용하려면 Nerd Font가 설치되어 있어야 한다.
+`--icons` 옵션을 사용하려면
+Nerd Font가 설치되어 있어야 한다.
 
 ```bash
 # Nerd Font 설치 (예: JetBrains Mono)
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-설치 후 터미널 앱에서 해당 폰트로 변경하면 아이콘이 정상 표시된다.
+설치 후 터미널 앱에서 해당 폰트로 변경하면
+아이콘이 정상 표시된다.

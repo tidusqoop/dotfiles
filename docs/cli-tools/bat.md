@@ -1,6 +1,7 @@
 # bat 사용법
 
-> `cat`의 상위 호환. 구문 강조(syntax highlighting), 줄번호, Git 변경 표시를 지원하는 파일 출력 도구.
+> `cat`의 상위 호환. 구문 강조(syntax highlighting),
+> 줄번호, Git 변경 표시를 지원하는 파일 출력 도구.
 
 ## 기본 사용법
 
@@ -27,11 +28,11 @@ bat -r 100: main.go      # 100번째 줄~끝
 ## 주요 옵션
 
 | 옵션 | 설명 |
-|------|------|
+| --- | --- |
 | `-n` | 줄번호만 표시 (헤더/테두리 없음) |
 | `-p` | plain 모드 (줄번호, 헤더, 테두리 모두 없음) |
 | `-pp` | `-p`보다 더 plain (cat과 동일하게 동작) |
-| `-l <lang>` | 언어 지정 (예: `-l json`, `-l yaml`, `-l py`) |
+| `-l <lang>` | 언어 지정 (예: `-l json`, `-l yaml`) |
 | `-r <범위>` | 줄 범위 지정 (예: `-r 10:20`) |
 | `--diff` | Git 변경 사항 표시 (추가/삭제된 줄 마킹) |
 | `--show-all` | 공백, 탭, 줄바꿈 등 비인쇄 문자 표시 |
@@ -68,7 +69,9 @@ git diff | bat -l diff
 `.zshrc`에 추가:
 
 ```bash
-export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -l man -p'"
+export MANPAGER="sh -c \
+  'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" \
+  | bat -l man -p'"
 ```
 
 ### tail -f 대용
@@ -85,7 +88,8 @@ tail -f /var/log/system.log | bat --paging=never -l log
 alias cat='bat -pp'
 ```
 
-> `-pp` 옵션을 쓰면 기존 `cat`과 동일한 출력 형태에 구문 강조만 추가된다.
+> `-pp` 옵션을 쓰면 기존 `cat`과 동일한 출력 형태에
+> 구문 강조만 추가된다.
 
 ## 설정 파일
 

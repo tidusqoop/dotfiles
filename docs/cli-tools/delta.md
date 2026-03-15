@@ -1,6 +1,9 @@
 # delta 사용법
 
-> `git diff`의 상위 호환. 구문 강조, 줄번호, side-by-side 비교를 지원하는 diff 출력 도구. git과 연동하면 diff, log, show, blame 출력이 모두 개선된다.
+> `git diff`의 상위 호환. 구문 강조, 줄번호,
+> side-by-side 비교를 지원하는 diff 출력 도구.
+> git과 연동하면 diff, log, show, blame 출력이
+> 모두 개선된다.
 
 ## 설치
 
@@ -28,7 +31,9 @@ brew install git-delta
     conflictstyle = zdiff3
 ```
 
-설정 후 `git diff`, `git log -p`, `git show`, `git blame` 등의 출력이 자동으로 delta를 통해 렌더링된다.
+설정 후 `git diff`, `git log -p`, `git show`,
+`git blame` 등의 출력이 자동으로 delta를 통해
+렌더링된다.
 
 ## 기본 사용법
 
@@ -57,22 +62,23 @@ kubectl diff -f deployment.yaml | delta
 ## 주요 옵션
 
 | 옵션 | 설명 |
-|------|------|
+| --- | --- |
 | `--side-by-side` / `-s` | 좌우 분할 비교 |
 | `--line-numbers` / `-n` | 줄번호 표시 |
 | `--navigate` | n/N 키로 파일 간 이동 |
 | `--dark` / `--light` | 다크/라이트 테마 |
 | `--syntax-theme <테마>` | 구문 강조 테마 지정 |
-| `--width <n>` | 출력 너비 지정 (side-by-side에서 유용) |
+| `--width <n>` | 출력 너비 지정 (side-by-side용) |
 | `--diff-so-fancy` | diff-so-fancy 스타일 레이아웃 |
 | `--color-only` | 색상만 적용 (레이아웃 변경 없음) |
 
 ## 네비게이션 (navigate 모드)
 
-`navigate = true` 설정 시 less에서 파일 간 이동이 가능하다:
+`navigate = true` 설정 시 less에서
+파일 간 이동이 가능하다:
 
 | 키 | 동작 |
-|----|------|
+| --- | --- |
 | `n` | 다음 파일로 이동 |
 | `N` | 이전 파일로 이동 |
 | `q` | 종료 |
@@ -96,7 +102,8 @@ delta --syntax-theme="Dracula" < <(git diff)
 
 ## side-by-side 임시 토글
 
-기본으로 side-by-side를 사용하되, 가끔 일반 모드로 보고 싶을 때:
+기본으로 side-by-side를 사용하되,
+가끔 일반 모드로 보고 싶을 때:
 
 ```bash
 # side-by-side 끄기
@@ -125,7 +132,8 @@ git log -p -- src/main.go
 git diff
 ```
 
-`merge.conflictstyle = zdiff3` 설정이 있으면 충돌 시 base/ours/theirs 세 가지를 모두 보여준다.
+`merge.conflictstyle = zdiff3` 설정이 있으면
+충돌 시 base/ours/theirs 세 가지를 모두 보여준다.
 
 ### git blame 가독성 향상
 

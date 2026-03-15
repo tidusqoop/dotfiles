@@ -1,6 +1,8 @@
 # ripgrep (rg) 사용법
 
-> `grep`의 상위 호환. 재귀 검색이 기본이고, `.gitignore`를 자동 반영하며, 구문 강조된 출력을 제공하는 초고속 텍스트 검색 도구.
+> `grep`의 상위 호환. 재귀 검색이 기본이고,
+> `.gitignore`를 자동 반영하며, 구문 강조된 출력을
+> 제공하는 초고속 텍스트 검색 도구.
 
 ## 설치
 
@@ -33,17 +35,17 @@ rg -F "fmt.Println("
 ## 주요 옵션
 
 | 옵션 | 설명 |
-|------|------|
+| --- | --- |
 | `-i` | 대소문자 무시 |
-| `-S` | 스마트 케이스 (패턴에 대문자가 있으면 대소문자 구분, 없으면 무시) |
-| `-w` | 단어 단위 매칭 (`error`가 `errors`에 매칭되지 않음) |
+| `-S` | 스마트 케이스 (대문자 있으면 구분) |
+| `-w` | 단어 단위 매칭 |
 | `-F` | 고정 문자열 검색 (정규식 비활성화) |
 | `-n` | 줄번호 표시 (기본 활성화) |
 | `-l` | 매칭된 파일 이름만 출력 |
 | `-c` | 파일별 매칭 수만 출력 |
 | `-v` | 매칭되지 않는 줄 출력 (invert) |
 | `--hidden` | 숨김 파일/디렉토리도 검색 |
-| `-u` | `.gitignore` 무시 (`-uu`는 숨김 파일도 포함, `-uuu`는 바이너리도 포함) |
+| `-u` | `.gitignore` 무시 (`-uu` 숨김 포함) |
 
 ## 컨텍스트 출력
 
@@ -100,14 +102,15 @@ rg --color=always "error" | less -R
 ## 치환 (replace)
 
 ```bash
-# 매칭된 부분을 치환하여 출력 (파일은 변경하지 않음)
+# 매칭된 부분을 치환하여 출력 (파일 변경 안 함)
 rg "foo" -r "bar"
 
 # 캡처 그룹 활용
 rg "Hello (\w+)" -r "Hi $1"
 
 # 실제 파일 수정은 sed와 조합
-rg -l "old_name" | xargs sed -i '' 's/old_name/new_name/g'
+rg -l "old_name" \
+  | xargs sed -i '' 's/old_name/new_name/g'
 ```
 
 ## 실전 활용 예시
@@ -150,7 +153,10 @@ rg "DB_HOST" --hidden -g "!.git"
 ### fzf와 조합하여 인터랙티브 검색
 
 ```bash
-rg --color=always --line-number "" | fzf --ansi --preview 'bat --color=always --highlight-line {2} {1}' --delimiter ':'
+rg --color=always --line-number "" \
+  | fzf --ansi \
+    --preview 'bat --color=always {1}' \
+    --delimiter ':'
 ```
 
 ### 특정 패턴의 파일만 찾기 (fd 대안)
@@ -163,7 +169,7 @@ rg --files -g "*.yaml"
 ## grep과 비교
 
 | 기능 | `grep -r` | `rg` |
-|------|-----------|------|
+| --- | --- | --- |
 | 재귀 검색 | `-r` 플래그 필요 | 기본 동작 |
 | `.gitignore` 반영 | 미지원 | 자동 반영 |
 | 바이너리 파일 | 검색함 | 자동 스킵 |

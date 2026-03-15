@@ -4,7 +4,7 @@
 
 ## 구조
 
-```
+```text
 ~/.local/share/chezmoi/
 ├── dot_zshrc                            # ~/.zshrc (alias, 플러그인, 프롬프트)
 ├── dot_gitconfig                        # ~/.gitconfig
@@ -25,7 +25,7 @@
 ## 포함된 도구
 
 | 분류 | 도구 |
-|------|------|
+| ------ | ------ |
 | 터미널 | Ghostty, tmux, tmuxinator, Starship |
 | 에디터 | Neovim (LazyVim) |
 | 쉘 | zsh, sheldon (플러그인 관리) |
@@ -36,7 +36,7 @@
 ## 주요 alias
 
 | alias | 명령 |
-|-------|------|
+| ------- | ------ |
 | `ll` / `la` / `lt` | eza 기반 ls |
 | `lg` | lazygit |
 | `y` | yazi (종료 시 디렉토리 이동) |
@@ -54,7 +54,8 @@ brew install chezmoi
 chezmoi init --apply git@github.com:tidusqoop/dotfiles.git
 ```
 
-`chezmoi apply` 시 자동으로 brew 패키지 설치 및 tmux 플러그인 설정이 실행됩니다.
+`chezmoi apply` 시 자동으로 brew 패키지 설치 및
+tmux 플러그인 설정이 실행됩니다.
 
 ## 사용법
 

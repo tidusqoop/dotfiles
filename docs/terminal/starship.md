@@ -1,6 +1,7 @@
 # starship
 
-크로스 셸 프롬프트. Rust 기반으로 빠르고, 설정 파일 하나로 관리.
+크로스 셸 프롬프트. Rust 기반으로 빠르고,
+설정 파일 하나로 관리.
 
 ## 설치
 
@@ -23,7 +24,7 @@ direnv hook 바로 위에 위치시킨다 (direnv는 항상 맨 마지막).
 
 ## 현재 프롬프트 구성
 
-```
+```text
 ~/projects/dotfiles | main +1 ~2 ?3 | 󱃾 prod |  staging
 ❯                                                     2.3s
 ```
@@ -31,11 +32,11 @@ direnv hook 바로 위에 위치시킨다 (direnv는 항상 맨 마지막).
 ### 좌측 (format)
 
 | 모듈 | 표시 | 설명 |
-|------|------|------|
-| `directory` | `~/projects/dotfiles` | repo root 기준 truncate, Nerd Font 없이 표시 |
+| --- | --- | --- |
+| `directory` | `~/projects/dotfiles` | repo root 기준 truncate |
 | `git_branch` | `\| main` | `\|` 구분자 + 브랜치명 |
-| `git_status` | `+1 ~2 ?3` | staged/modified/untracked/deleted/renamed/conflicted/ahead/behind |
-| `kubernetes` | `\| 󱃾 context` | 컨텍스트명 (항상 표시, detect_folders 비움) |
+| `git_status` | `+1 ~2 ?3` | staged/modified/untracked 등 |
+| `kubernetes` | `\| 󱃾 context` | 컨텍스트명 (항상 표시) |
 | `aws` | `\|  profile` | AWS 프로필명 (force_display) |
 | `character` | `❯` | 성공=초록, 실패=빨강, vim=`❮` |
 | `sudo` | `#` | root일 때 빨간 `#` 표시 |
@@ -43,13 +44,13 @@ direnv hook 바로 위에 위치시킨다 (direnv는 항상 맨 마지막).
 ### 우측 (right_format)
 
 | 모듈 | 표시 | 설명 |
-|------|------|------|
+| --- | --- | --- |
 | `cmd_duration` | `2.3s` | 2초 이상일 때 실행시간 표시 |
 
 ## Git Status 기호
 
 | 기호 | 의미 | 색상 |
-|------|------|------|
+| --- | --- | --- |
 | `+N` | staged | `#9ece6a` (초록, bold) |
 | `~N` | modified | `#e0af68` (노랑) |
 | `?N` | untracked | `#7aa2f7` (파랑) |
@@ -61,7 +62,7 @@ direnv hook 바로 위에 위치시킨다 (direnv는 항상 맨 마지막).
 ## 색상 팔레트
 
 | 요소 | 색상 코드 | 비고 |
-|------|----------|------|
+| --- | --- | --- |
 | 디렉토리 | `#e4e7f3` (밝은 회색, bold) | |
 | Git 브랜치 | `#8edf96` (초록) | |
 | K8s / AWS | `#636985` (어두운 회색) | 보조 정보 톤다운 |
@@ -94,4 +95,5 @@ starship preset <preset-name> > ~/.config/starship.toml
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-설치 후 터미널 폰트를 변경하고 `starship.toml`에서 아이콘 추가.
+설치 후 터미널 폰트를 변경하고
+`starship.toml`에서 아이콘 추가.
