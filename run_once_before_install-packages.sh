@@ -16,6 +16,7 @@ brew install \
     k9s \
     kubectl \
     lazygit \
+    markdownlint-cli2 \
     neovim \
     ripgrep \
     sheldon \
