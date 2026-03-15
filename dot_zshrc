@@ -46,6 +46,13 @@ function y() {
   rm -f -- "$tmp"
 }
 
+# kubectl
+if command -v kubectl &> /dev/null; then
+  alias k='kubectl'
+  source <(kubectl completion zsh)
+  compdef k=kubectl
+fi
+
 # aws
 export AWS_PROFILE="${AWS_PROFILE:-default}"
 
