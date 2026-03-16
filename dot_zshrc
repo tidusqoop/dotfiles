@@ -1,6 +1,11 @@
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR='nvim'
 
+# SSH 세션에서 terminfo 미지원 TERM 보정
+if [[ -n "$SSH_TTY" ]] && ! infocmp "$TERM" &>/dev/null; then
+  export TERM=xterm-256color
+fi
+
 # completion
 autoload -Uz compinit && compinit
 
