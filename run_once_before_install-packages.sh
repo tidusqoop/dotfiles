@@ -15,6 +15,7 @@ brew install \
     jq \
     k9s \
     kubectl \
+    kustomize \
     lazygit \
     markdownlint-cli2 \
     neovim \
