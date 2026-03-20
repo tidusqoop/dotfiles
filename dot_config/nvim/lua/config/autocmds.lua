@@ -8,6 +8,16 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+-- 포커스 복귀 시 영문 입력 소스로 자동 전환
+vim.api.nvim_create_autocmd("FocusGained", {
+  group = vim.api.nvim_create_augroup("im_select_focus", { clear = true }),
+  callback = function()
+    if vim.fn.mode() ~= "i" then
+      vim.fn.system({ "macism", "com.apple.keylayout.ABC" })
+    end
+  end,
+})
+
 -- Snacks Explorer git 상태 자동 갱신
 vim.api.nvim_create_autocmd("FocusGained", {
   group = vim.api.nvim_create_augroup("snacks_explorer_git_refresh", { clear = true }),
