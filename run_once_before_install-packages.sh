@@ -2,6 +2,7 @@
 
 # CLI 도구
 brew install \
+    argocd \
     bat \
     delta \
     direnv \
