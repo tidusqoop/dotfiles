@@ -67,6 +67,11 @@ if command -v helm &> /dev/null; then
   source <(helm completion zsh)
 fi
 
+# argocd
+if command -v argocd &> /dev/null; then
+  source <(argocd completion zsh)
+fi
+
 # aws
 export AWS_PROFILE="${AWS_PROFILE:-default}"
 
