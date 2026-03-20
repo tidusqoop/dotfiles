@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 서드파티 tap
+brew tap laishulu/homebrew
+
 # CLI 도구
 brew install \
     argocd \
