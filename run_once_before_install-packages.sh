@@ -18,6 +18,7 @@ brew install \
     kubectl \
     kustomize \
     lazygit \
+    macism \
     markdownlint-cli2 \
     neovim \
     ripgrep \
