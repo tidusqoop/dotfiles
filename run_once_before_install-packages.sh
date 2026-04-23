@@ -6,6 +6,7 @@ brew tap laishulu/homebrew
 # CLI 도구
 brew install \
     argocd \
+    awscli \
     bat \
     delta \
     direnv \
