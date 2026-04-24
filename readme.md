@@ -46,6 +46,28 @@
 
 ## 새 머신에서 설정
 
+### 1. chezmoi 로컬 설정 파일 생성
+
+chezmoi는 머신별 분기를 위해 `~/.config/chezmoi/chezmoi.toml`을 사용합니다.
+이 파일은 소스 레포에 포함되지 않으므로 **초기화 전에 직접 생성**해야 합니다.
+
+```bash
+mkdir -p ~/.config/chezmoi
+cat > ~/.config/chezmoi/chezmoi.toml << 'EOF'
+[diff]
+  command = "delta"
+
+[data]
+  machine = "toss-income"  # 개인 장비는 "personal"
+EOF
+```
+
+현재 지원하는 `machine` 값:
+- `toss-income` — 회사 장비 전용 설정 활성화
+- 그 외 — 기본 설정만 적용
+
+### 2. 초기화 및 적용
+
 ```bash
 # chezmoi 설치
 brew install chezmoi
