@@ -343,3 +343,53 @@ Ctrl-w q       # 현재 창 닫기
   <Space>cr      이름 변경 (rename)
   <Space>cf      포맷
 ```
+
+---
+
+## Claude Code
+
+### 입력 편집
+
+```text
+Ctrl-A / Ctrl-E    줄 처음 / 끝으로 커서 이동
+Alt-B / Alt-F      단어 단위 커서 이동
+Ctrl-W             이전 단어 삭제
+Ctrl-U             커서 앞 전체 삭제
+Ctrl-K             커서 뒤 전체 삭제
+Ctrl-Y             삭제한 텍스트 붙여넣기
+Ctrl-R             이전 명령 검색
+```
+
+### 멀티라인 입력
+
+```text
+Shift-Enter        새 줄 (Ghostty 네이티브 지원)
+\ + Enter          새 줄 (모든 터미널)
+Ctrl-J             새 줄 (모든 터미널)
+Ctrl-G             외부 에디터($EDITOR)로 프롬프트 작성
+```
+
+### 응답 제어
+
+```text
+Ctrl-C             생성 중단 / 입력 취소
+Esc Esc            이전 상태로 되감기 (rewind)
+```
+
+### 세션
+
+```text
+/clear             대화 기록 초기화
+/compact           컨텍스트 요약 압축
+Ctrl-L             화면 리드로우 (기록 유지)
+Ctrl-D             세션 종료
+```
+
+### 기타
+
+```text
+!<cmd>             bash 명령 직접 실행 (예: !git status)
+@                  파일 경로 자동완성
+?                  현재 환경 단축키 목록 표시
+Shift-Tab          권한 모드 순환 (default → plan → auto)
+```
