@@ -2,6 +2,8 @@
 
 # 서드파티 tap
 brew tap laishulu/homebrew
+brew tap nikitabobko/tap
+brew tap FelixKratz/formulae
 
 # CLI 도구
 brew install \
@@ -59,4 +61,8 @@ fi
 
 # GUI 앱
 brew install --cask \
+    aerospace \
     ghostty
+
+# Aerospace 보조 도구
+brew install borders

@@ -81,6 +81,52 @@ Ctrl-h         # 숨김 파일 토글  ⭐ 커스텀
 
 ---
 
+## Aerospace (Window Tiling)
+
+modifier: `CapsLock` = Ctrl+Cmd+Option (Karabiner 리매핑)
+- CapsLock 단독 탭 → `Escape`
+
+### 창 포커스 / 이동
+
+```text
+CapsLock + ←↑↓→        # 포커스 이동
+CapsLock + ⇧ + ←↑↓→    # 창 위치 이동
+```
+
+### 워크스페이스
+
+```text
+CapsLock + 1~5         # 왼쪽 모니터 워크스페이스 전환
+CapsLock + 6~9         # 오른쪽 모니터 워크스페이스 전환
+CapsLock + ⇧ + 1~9     # 현재 창을 워크스페이스로 이동
+```
+
+### 모니터
+
+```text
+CapsLock + ,           # 포커스를 이전 모니터로
+CapsLock + .           # 포커스를 다음 모니터로
+CapsLock + m           # 창을 다음 모니터로 이동
+CapsLock + ⇧ + m       # 창을 이전 모니터로 이동
+```
+
+### 기타
+
+```text
+CapsLock + /           # 레이아웃 전환 (수평 ↔ 수직)
+CapsLock + f           # 풀스크린 토글
+CapsLock + ⇧ + r       # 설정 리로드
+```
+
+### Karabiner 키 리매핑
+
+```text
+CapsLock (탭)          # Escape
+오른쪽 Command         # 한/영 전환
+```
+
+---
+
 ## tmux
 
 prefix: `Ctrl-b`

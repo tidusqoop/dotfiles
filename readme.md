@@ -9,8 +9,11 @@
 ├── dot_zshrc                            # ~/.zshrc (alias, 플러그인, 프롬프트)
 ├── dot_gitconfig                        # ~/.gitconfig
 ├── dot_config/
+│   ├── aerospace/aerospace.toml         # Aerospace 타일링 WM 설정
 │   ├── bat/config                       # bat 설정
+│   ├── borders/bordersrc                # JankyBorders 활성 창 테두리 설정
 │   ├── ghostty/config                   # Ghostty 터미널 설정
+│   ├── karabiner/karabiner.json         # Karabiner-Elements 키 리매핑 설정
 │   ├── nvim/                            # Neovim + LazyVim 설정
 │   ├── sheldon/plugins.toml             # zsh 플러그인 관리
 │   ├── starship.toml                    # Starship 프롬프트
@@ -32,6 +35,8 @@
 | 파일/검색 | eza, fd, fzf, ripgrep, yazi, tree |
 | Git | lazygit, delta |
 | 유틸리티 | bat, direnv, htop, jq, yq, zoxide |
+| 윈도우 관리 | Aerospace (타일링), JankyBorders (활성 창 테두리) |
+| 키보드 | Karabiner-Elements (키 리매핑) |
 
 ## 주요 alias
 
@@ -67,7 +72,21 @@ EOF
 - `toss-income` — 회사 장비 전용 설정 활성화
 - 그 외 — 기본 설정만 적용
 
-### 2. 초기화 및 적용
+### 2. 수동 설치 필요 항목
+
+PKG 설치 방식으로 인해 `chezmoi apply` 스크립트에서 자동 설치가 불가능합니다.
+**초기화 전에 직접 설치**해야 합니다.
+
+```bash
+brew install --cask karabiner-elements
+```
+
+설치 후 아래 권한 허용 및 설정이 필요합니다:
+
+- `시스템 설정 → 개인 정보 보호 및 보안 → 입력 모니터링 → Karabiner-Elements 허용`
+- `시스템 설정 → 키보드 → 키보드 단축키 → 입력 소스 → "입력 메뉴에서 다음 소스 선택" → F18 지정`
+
+### 4. 초기화 및 적용
 
 ```bash
 # chezmoi 설치
