@@ -4,11 +4,13 @@
 brew tap laishulu/homebrew
 brew tap nikitabobko/tap
 brew tap FelixKratz/formulae
+brew tap aws/tap
 
 # CLI 도구
 brew install \
     argocd \
     awscli \
+    eks-node-viewer \
     bat \
     delta \
     direnv \
