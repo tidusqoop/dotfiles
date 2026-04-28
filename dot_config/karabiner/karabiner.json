@@ -28,7 +28,7 @@
             ]
           },
           {
-            "description": "CapsLock → Cmd+Ctrl+Option (held) / Escape (tap)",
+            "description": "CapsLock → Ctrl+Option (held) / Escape (tap)",
             "manipulators": [
               {
                 "type": "basic",
@@ -41,7 +41,7 @@
                 "to": [
                   {
                     "key_code": "left_option",
-                    "modifiers": ["left_command", "left_control"]
+                    "modifiers": ["left_control"]
                   }
                 ],
                 "to_if_alone": [

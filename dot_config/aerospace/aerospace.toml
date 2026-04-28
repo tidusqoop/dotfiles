@@ -24,52 +24,52 @@ outer.bottom = 8
 
 [mode.main.binding]
 # 창 포커스 이동 (CapsLock + 화살표)
-ctrl-alt-cmd-left  = 'focus left'
-ctrl-alt-cmd-down  = 'focus down'
-ctrl-alt-cmd-up    = 'focus up'
-ctrl-alt-cmd-right = 'focus right'
+ctrl-alt-left  = 'focus left'
+ctrl-alt-down  = 'focus down'
+ctrl-alt-up    = 'focus up'
+ctrl-alt-right = 'focus right'
 
 # 창 위치 이동 (CapsLock + ⇧ + 화살표)
-ctrl-alt-cmd-shift-left  = 'move left'
-ctrl-alt-cmd-shift-down  = 'move down'
-ctrl-alt-cmd-shift-up    = 'move up'
-ctrl-alt-cmd-shift-right = 'move right'
+ctrl-alt-shift-left  = 'move left'
+ctrl-alt-shift-down  = 'move down'
+ctrl-alt-shift-up    = 'move up'
+ctrl-alt-shift-right = 'move right'
 
 # 워크스페이스 이동 (CapsLock + 숫자)
-ctrl-alt-cmd-1 = 'workspace 1'
-ctrl-alt-cmd-2 = 'workspace 2'
-ctrl-alt-cmd-3 = 'workspace 3'
-ctrl-alt-cmd-4 = 'workspace 4'
-ctrl-alt-cmd-5 = 'workspace 5'
-ctrl-alt-cmd-6 = 'workspace 6'
-ctrl-alt-cmd-7 = 'workspace 7'
-ctrl-alt-cmd-8 = 'workspace 8'
-ctrl-alt-cmd-9 = 'workspace 9'
+ctrl-alt-1 = 'workspace 1'
+ctrl-alt-2 = 'workspace 2'
+ctrl-alt-3 = 'workspace 3'
+ctrl-alt-4 = 'workspace 4'
+ctrl-alt-5 = 'workspace 5'
+ctrl-alt-6 = 'workspace 6'
+ctrl-alt-7 = 'workspace 7'
+ctrl-alt-8 = 'workspace 8'
+ctrl-alt-9 = 'workspace 9'
 
 # 창을 워크스페이스로 이동 (CapsLock + ⇧ + 숫자)
-ctrl-alt-cmd-shift-1 = 'move-node-to-workspace 1'
-ctrl-alt-cmd-shift-2 = 'move-node-to-workspace 2'
-ctrl-alt-cmd-shift-3 = 'move-node-to-workspace 3'
-ctrl-alt-cmd-shift-4 = 'move-node-to-workspace 4'
-ctrl-alt-cmd-shift-5 = 'move-node-to-workspace 5'
-ctrl-alt-cmd-shift-6 = 'move-node-to-workspace 6'
-ctrl-alt-cmd-shift-7 = 'move-node-to-workspace 7'
-ctrl-alt-cmd-shift-8 = 'move-node-to-workspace 8'
-ctrl-alt-cmd-shift-9 = 'move-node-to-workspace 9'
+ctrl-alt-shift-1 = 'move-node-to-workspace 1'
+ctrl-alt-shift-2 = 'move-node-to-workspace 2'
+ctrl-alt-shift-3 = 'move-node-to-workspace 3'
+ctrl-alt-shift-4 = 'move-node-to-workspace 4'
+ctrl-alt-shift-5 = 'move-node-to-workspace 5'
+ctrl-alt-shift-6 = 'move-node-to-workspace 6'
+ctrl-alt-shift-7 = 'move-node-to-workspace 7'
+ctrl-alt-shift-8 = 'move-node-to-workspace 8'
+ctrl-alt-shift-9 = 'move-node-to-workspace 9'
 
 # 레이아웃 전환 (CapsLock + /)
-ctrl-alt-cmd-slash = 'layout tiles horizontal vertical'
+ctrl-alt-slash = 'layout tiles horizontal vertical'
 
 # 풀스크린 토글 (CapsLock + f)
-ctrl-alt-cmd-f = 'fullscreen'
+ctrl-alt-f = 'fullscreen'
 
 # 설정 리로드 (CapsLock + ⇧ + r)
-ctrl-alt-cmd-shift-r = 'reload-config'
+ctrl-alt-shift-r = 'reload-config'
 
 # 모니터 포커스 이동 (CapsLock + , / .)
-ctrl-alt-cmd-comma  = 'focus-monitor prev'
-ctrl-alt-cmd-period = 'focus-monitor next'
+ctrl-alt-comma  = 'focus-monitor prev'
+ctrl-alt-period = 'focus-monitor next'
 
-# 창을 다른 모니터로 이동 (CapsLock + m / ⇧+m)
-ctrl-alt-cmd-m       = 'move-node-to-monitor next'
-ctrl-alt-cmd-shift-m = 'move-node-to-monitor prev'
+# 창을 다른 모니터로 이동 (CapsLock + ⇧ + , / .)
+ctrl-alt-shift-comma  = 'move-node-to-monitor prev'
+ctrl-alt-shift-period = 'move-node-to-monitor next'

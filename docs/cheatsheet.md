@@ -83,7 +83,7 @@ Ctrl-h         # 숨김 파일 토글  ⭐ 커스텀
 
 ## Aerospace (Window Tiling)
 
-modifier: `CapsLock` = Ctrl+Cmd+Option (Karabiner 리매핑)
+modifier: `CapsLock` = Ctrl+Option (Karabiner 리매핑)
 - CapsLock 단독 탭 → `Escape`
 
 ### 창 포커스 / 이동
@@ -106,8 +106,8 @@ CapsLock + ⇧ + 1~9     # 현재 창을 워크스페이스로 이동
 ```text
 CapsLock + ,           # 포커스를 이전 모니터로
 CapsLock + .           # 포커스를 다음 모니터로
-CapsLock + m           # 창을 다음 모니터로 이동
-CapsLock + ⇧ + m       # 창을 이전 모니터로 이동
+CapsLock + ⇧ + ,       # 창을 이전 모니터로 이동
+CapsLock + ⇧ + .       # 창을 다음 모니터로 이동
 ```
 
 ### 기타
