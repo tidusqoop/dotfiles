@@ -1,2 +1,5 @@
 readme.md
 docs/
+{{ if eq .machine "toss-income" }}
+.config/karabiner
+{{ end }}
