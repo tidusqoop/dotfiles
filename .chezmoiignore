@@ -1,5 +1,4 @@
 readme.md
 docs/
-{{ if eq .machine "toss-income" }}
-.config/karabiner
-{{ end }}
+.config/karabiner/assets
+.config/karabiner/automatic_backups
