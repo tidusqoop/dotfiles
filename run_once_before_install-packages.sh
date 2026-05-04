@@ -64,7 +64,8 @@ fi
 # GUI 앱
 brew install --cask \
     aerospace \
-    ghostty
+    ghostty \
+    maccy
 
 # Aerospace 보조 도구
 brew install borders
