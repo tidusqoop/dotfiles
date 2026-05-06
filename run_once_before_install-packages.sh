@@ -17,6 +17,7 @@ brew install \
     eza \
     fd \
     fzf \
+    gh \
     go \
     golangci-lint \
     helm \
