@@ -57,7 +57,24 @@ Ctrl-b -      # 상하 pane 분할 (커스텀)
 Ctrl-b 방향키  # pane 이동
 Ctrl-b x      # 현재 pane 종료
 Ctrl-b z      # pane 줌 토글 (전체화면)
+Ctrl-b [      # copy mode 진입 (스크롤/복사)
 ```
+
+### Copy Mode (vi 모드)
+
+`mode-keys vi` 설정으로 vi 키바인딩을 사용한다.
+휠 스크롤도 자동으로 copy mode로 진입.
+
+- **이동**: `h j k l`, `w/b`, `0/$`, `gg/G`,
+  `Ctrl-u/d` (반 페이지), `Ctrl-b/f` (한 페이지)
+- **선택**: `v` (문자), `V` (줄)
+- **복사**: `y` (시스템 클립보드로 복사 후 종료)
+- **검색**: `/<pattern>` 앞으로, `?<pattern>` 뒤로,
+  `n/N` 다음/이전
+- **종료**: `q` 또는 `Esc`
+
+vim/neovim과 동일한 키바인딩이라
+컨텍스트 전환 비용이 거의 없다.
 
 ## DevOps 활용 예시
 

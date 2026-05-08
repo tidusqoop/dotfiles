@@ -170,17 +170,29 @@ Ctrl-b q       # pane 번호 표시
 Ctrl-b H / J / K / L   # 좌 / 하 / 상 / 우로 5칸 조절 (반복 가능)  ⭐ 커스텀
 ```
 
-### Copy Mode (스크롤 / 복사)
+### Copy Mode (스크롤 / 복사) — vi 모드
 
 ```text
-Ctrl-b [       # copy mode 진입
+Ctrl-b [       # copy mode 진입 (휠 스크롤로도 진입)
 q 또는 Esc     # 종료
-↑↓ / hjkl     # 이동
-PgUp / PgDn   # 페이지 스크롤
-/              # 앞으로 검색
-?              # 뒤로 검색
-Space          # 선택 시작
-Enter          # 복사 후 종료
+
+이동
+  h j k l        좌 하 상 우
+  w / b          다음 / 이전 단어
+  0 / $          줄 처음 / 끝
+  gg / G         버퍼 처음 / 끝
+  Ctrl-u / d     반 페이지 위 / 아래
+  Ctrl-b / f     한 페이지 위 / 아래
+
+선택 / 복사
+  v              문자 단위 선택 시작  ⭐ 커스텀
+  V              줄 단위 선택        ⭐ 커스텀
+  y              선택 영역 복사 후 종료 (pbcopy 연동)  ⭐ 커스텀
+
+검색
+  /<pattern>     앞으로 검색
+  ?<pattern>     뒤로 검색
+  n / N          다음 / 이전 결과
 ```
 
 ### 커맨드 모드 (`Ctrl-b :`)
